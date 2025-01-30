@@ -18,7 +18,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/pokemon", pokemonRoutes);
 app.use("/api/battle", battleRoutes);
 app.use("/api/settings", settingsRoutes);
-app.get("/", (req, res) => res.status(200).json("profile"))
-;
-
+app.get("/", (req, res) => {
+    res.send("profile");
+});
 export default app;
